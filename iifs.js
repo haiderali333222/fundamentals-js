@@ -1,12 +1,18 @@
 function iifs() {
     try {
+
+
       // Encapsulate your code in an IIFE to prevent polluting the global scope.
       (function () {
         var message = 'Immediate Invoked Function Expression is called';
         console.log(`${message}`);
       })();
+
+
+    //   The above expression is equal to 
+
   
-      // Use meaningful function names to improve code readability.
+      // function declaration
       function namedFunction() {
         var message = 'Named function message';
         console.log(`${message} called and invoked`);
@@ -14,7 +20,7 @@ function iifs() {
   
       namedFunction(); // Call the named function.
   
-      // Use const or let instead of var for variable declarations to adhere to modern JavaScript standards.
+      // function expression
       const arrowFunction = () => {
         var message = 'Arrow function message';
         console.log(`${message} invoked`);
