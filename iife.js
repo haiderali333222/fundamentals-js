@@ -1,4 +1,4 @@
-function iifs() {
+function iife() {
     try {
 
 
@@ -36,5 +36,5 @@ function iifs() {
   }
   
   // Call the iifs function to execute the code.
-  iifs();
+  iife();
   

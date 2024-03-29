@@ -1,13 +1,24 @@
-/* Immediate invoked function Expressions
-runs as soon as it is defined */
+const GLOBAL_MESSAGE="Can be accessed everywhere"
 
-function closures() {
+function closures(){
 
-// invoking 
-  (function () {
-    console.log('aa gya hu main ');
-  })();
+    var outsideMessage="message outside IIFE"
 
+    (function(){
+        var insideMessage= "message inside IIFE"
+        console.log(outsideMessage) // variables can be accessed if declared in outerscope 
+    })
+
+    console.log(insideMessage)  // variables cannot be accessed if declared in innerscope 
 
 }
+
+function sayHello(){
+
+    var message="hello world"
+
+    console.log(message)
+}
+
+
 closures()
