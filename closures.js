@@ -1,24 +1,16 @@
-const GLOBAL_MESSAGE="Can be accessed everywhere"
+const GLOBAL_MESSAGE = 'Can be accessed everywhere';
 
-function closures(){
+function closures() {
+  var outsideMessage = 'message outside IIFE'(function () {
+    var insideMessage = 'message inside IIFE';
+    console.log(outsideMessage); // variables can be accessed if declared in outerscope
+  });
 
-    var outsideMessage="message outside IIFE"
-
-    (function(){
-        var insideMessage= "message inside IIFE"
-        console.log(outsideMessage) // variables can be accessed if declared in outerscope 
-    })
-
-    console.log(insideMessage)  // variables cannot be accessed if declared in innerscope 
-
+  console.log(insideMessage); // variables cannot be accessed if declared in innerscope
 }
 
-function sayHello(){
+function sayHello() {
+  var message = 'hello world';
 
-    var message="hello world"
-
-    console.log(message)
+  console.log(message);
 }
-
-
-closures()
